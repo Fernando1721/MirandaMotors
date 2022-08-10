@@ -28,6 +28,8 @@ public class Principal extends JFrame {
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 	private JLabel lblData;
+	private JButton btnUsuarios;
+	private JButton btnRelatorios;
 
 	/**
 	 * Launch the application.
@@ -102,8 +104,9 @@ public class Principal extends JFrame {
 		btnNewButton_1.setBounds(202, 11, 128, 128);
 		contentPane.add(btnNewButton_1);
 		
-		JButton btnNewButton_2 = new JButton("");
-		btnNewButton_2.addActionListener(new ActionListener() {
+		btnUsuarios = new JButton("");
+		btnUsuarios.setEnabled(false);
+		btnUsuarios.addActionListener(new ActionListener() {
 			// evento clicar no botão
 			public void actionPerformed(ActionEvent e) {
 				// link para o JDialog
@@ -111,11 +114,11 @@ public class Principal extends JFrame {
 				usuarios.setVisible(true);
 			}
 		});
-		btnNewButton_2.setIcon(new ImageIcon(Principal.class.getResource("/img/usuario.png")));
-		btnNewButton_2.setToolTipText("Usu\u00E1rios");
-		btnNewButton_2.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
-		btnNewButton_2.setBounds(40, 11, 128, 128);
-		contentPane.add(btnNewButton_2);
+		btnUsuarios.setIcon(new ImageIcon(Principal.class.getResource("/img/usuario.png")));
+		btnUsuarios.setToolTipText("Usu\u00E1rios");
+		btnUsuarios.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		btnUsuarios.setBounds(40, 11, 128, 128);
+		contentPane.add(btnUsuarios);
 		
 		JButton btnNewButton_4 = new JButton("");
 		btnNewButton_4.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
@@ -144,18 +147,19 @@ public class Principal extends JFrame {
 		btnNewButton_4_1.setBounds(40, 160, 128, 128);
 		contentPane.add(btnNewButton_4_1);
 		
-		JButton btnNewButton_4_2 = new JButton("");
-		btnNewButton_4_2.addActionListener(new ActionListener() {
+		btnRelatorios = new JButton("");
+		btnRelatorios.setEnabled(false);
+		btnRelatorios.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				Relatorio relatorio = new Relatorio();
 				relatorio.setVisible(true);
 			}
 		});
-		btnNewButton_4_2.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
-		btnNewButton_4_2.setToolTipText("Relat\u00F3rio");
-		btnNewButton_4_2.setIcon(new ImageIcon(Principal.class.getResource("/img/relatorio.png")));
-		btnNewButton_4_2.setBounds(202, 160, 128, 128);
-		contentPane.add(btnNewButton_4_2);
+		btnRelatorios.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		btnRelatorios.setToolTipText("Relat\u00F3rio");
+		btnRelatorios.setIcon(new ImageIcon(Principal.class.getResource("/img/relatorio.png")));
+		btnRelatorios.setBounds(202, 160, 128, 128);
+		contentPane.add(btnRelatorios);
 		
 		JButton btnNewButton_4_3 = new JButton("");
 		btnNewButton_4_3.addActionListener(new ActionListener() {
