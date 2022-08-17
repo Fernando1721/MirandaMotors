@@ -19,6 +19,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import java.awt.Font;
+import java.awt.Color;
 
 public class Principal extends JFrame {
 
@@ -28,8 +29,11 @@ public class Principal extends JFrame {
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 	private JLabel lblData;
-	private JButton btnUsuarios;
-	private JButton btnRelatorios;
+	// Atribuir o modificador privado para publico para enxergar os métodos
+	public JButton btnUsuarios;
+	public JButton btnRelatorios;
+	public JPanel panelUsuario;
+	public JLabel lblUsuario;
 
 	/**
 	 * Launch the application.
@@ -187,16 +191,22 @@ public class Principal extends JFrame {
 		btnNewButton_4_3_1.setBounds(537, 160, 128, 128);
 		contentPane.add(btnNewButton_4_3_1);
 		
-		JPanel panel = new JPanel();
-		panel.setBackground(SystemColor.activeCaptionBorder);
-		panel.setBounds(0, 348, 701, 53);
-		contentPane.add(panel);
-		panel.setLayout(null);
+		panelUsuario = new JPanel();
+		panelUsuario.setBackground(SystemColor.activeCaptionBorder);
+		panelUsuario.setBounds(0, 348, 701, 53);
+		contentPane.add(panelUsuario);
+		panelUsuario.setLayout(null);
 		
 		lblData = new JLabel("");
 		lblData.setBounds(420, 11, 281, 30);
-		panel.add(lblData);
+		panelUsuario.add(lblData);
 		lblData.setForeground(SystemColor.desktop);
 		lblData.setFont(new Font("Tahoma", Font.BOLD, 14));
+		
+		lblUsuario = new JLabel("");
+		lblUsuario.setForeground(Color.BLACK);
+		lblUsuario.setFont(new Font("Tahoma", Font.BOLD, 12));
+		lblUsuario.setBounds(0, 21, 343, 21);
+		panelUsuario.add(lblUsuario);
 	}// fim do construtor
 }
