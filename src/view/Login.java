@@ -112,6 +112,9 @@ public class Login extends JFrame {
 
 		RestrictedTextField validarSenha = new RestrictedTextField(txtSenha);
 		validarSenha.setLimit(255);
+		
+		// Usar o Enter ao invés de 'clicar' no botão para logar
+		getRootPane().setDefaultButton(btnLogar);
 
 	}// fim do construtor
 
